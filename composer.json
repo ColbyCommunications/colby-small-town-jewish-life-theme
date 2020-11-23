@@ -1,8 +1,8 @@
 {
-    "name": "colbycommunications/colby-base-theme",
+    "name": "colbycommunications/colby-small-town-jewish-life-theme",
     "type": "wordpress-theme",
     "license": "MIT",
-    "description": "Colby WordPress starter theme with a modern development workflow",
+    "description": "Colby WordPress theme for Center for Small Town Jewish Life",
     "authors": [
         {
             "name": "Brandon Waltz",
