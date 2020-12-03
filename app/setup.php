@@ -13,6 +13,8 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.10.2/css/all.css', array(), '5.10.2' );
+    wp_enqueue_style( 'typekit', 'https://use.typekit.net/djf7stt.cs', array(), '1.0.0' );
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -25,9 +27,10 @@ add_action('wp_enqueue_scripts', function () {
 add_action('after_setup_theme', function () {
     add_theme_support('custom-logo', [
         // whatever settings
-        'height' => 150,
-        'width' => 150,
+        'height' => 254,
+        'width' => 98,
         'flex-width' => true,
+        'flex-height' => true,
       ]);
     /**
      * Enable features from Soil when plugin is activated
