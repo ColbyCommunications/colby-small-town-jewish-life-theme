@@ -13,10 +13,12 @@
 
 /** Import theme styles */
 @import 'common/global';
+@import 'common/mixins';
 @import 'components/buttons';
 @import 'components/comments';
 @import 'components/forms';
 @import 'components/wp-classes';
+@import 'components/elementor';
 @import 'layouts/header';
 @import 'layouts/sidebar';
 @import 'layouts/footer';
