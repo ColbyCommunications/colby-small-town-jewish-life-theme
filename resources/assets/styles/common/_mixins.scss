@@ -4,28 +4,28 @@
 }
 
 @mixin aspect-ratio($width, $height) {
-  position: relative;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-  > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 @mixin border-radius($radius) {
@@ -36,7 +36,7 @@
 }
 @mixin box-shadow($shadow...) {
 	-webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
-	box-shadow: $shadow;
+	        box-shadow: $shadow;
 }
 
 @mixin box-sizing($box-model) {
@@ -50,7 +50,7 @@
 	     -o-transform: $transforms;
 	    -ms-transform: $transforms;
 	-webkit-transform: $transforms;
-          transform: $transforms;
+            transform: $transforms;
 }
 
 @mixin transition($transition...) {
