@@ -31,13 +31,13 @@ section.equal-height div.elementor-widget-wrap > div {
     }
     .elementor-cta__content {
         border-top: solid 7px #ffffff;
-        &:before {
-            content: '';
-            @include arrow(bottom, #ffffff, 12px);
-            position: absolute;
-            left: calc(50% - 6px);
-            top: 0;
-        }
+        // &:before {
+        //     content: '';
+        //     @include arrow(bottom, #ffffff, 12px);
+        //     position: absolute;
+        //     left: calc(50% - 6px);
+        //     top: 0;
+        // }
     }
 }
 
