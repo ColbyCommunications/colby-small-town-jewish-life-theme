@@ -14,18 +14,20 @@ section.page-header {
     }
 }
 
-ul.elementor-nav-menu {
-    z-index: 3;
-    li.special {
-        position: relative;
-        &:before {
-            background: transparent url(../images/donate_tag.png) no-repeat scroll center bottom;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
+@media #{$desktop_media} {
+    ul.elementor-nav-menu {
+        z-index: 3;
+        li.special {
+            position: relative;
+            &:before {
+                background: transparent url(../images/donate_tag.png) no-repeat scroll center bottom;
+                content: '';
+                position: absolute;
+                top: -17px;
+                left: 0;
+                width: 100%;
+                height: 80px;
+            }
         }
     }
 }

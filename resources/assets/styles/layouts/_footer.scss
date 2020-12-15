@@ -9,30 +9,30 @@ footer {
             color: #fff;
         }
     }
-    ul {
-        display: flex;
-        flex-direction: row !important;
-        li {
-            padding: 0.8rem;
-            a {
-                color: #fff;
-                &:hover {
-                    color: #fff;
-                }
-            }
-        }
-    }
+    // ul {
+    //     display: flex;
+    //     flex-direction: row !important;
+    //     li {
+    //         padding: 0.8rem;
+    //         a {
+    //             color: #fff;
+    //             &:hover {
+    //                 color: #fff;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 @media (max-width: 768px) {
-    footer {
-        > div {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            flex-direction: column;
-        }
-        .colby-base-theme-footer-menu {
-            margin-top: 20px;
-        }
-    }
+    // footer {
+    //     > div {
+    //         padding-top: 50px;
+    //         padding-bottom: 50px;
+    //         flex-direction: column;
+    //     }
+    //     .colby-base-theme-footer-menu {
+    //         margin-top: 20px;
+    //     }
+    // }
 }
