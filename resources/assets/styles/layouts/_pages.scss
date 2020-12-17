@@ -6,6 +6,10 @@ body {
     }
 }
 
+nav.nav-bar {
+    display: none;
+}
+
 /* Elementor Fix - Keep columns aligned to parent when changing Column Gap. */
 // .elementor-section {
 // 	> .elementor-column-gap-default > .elementor-row {
