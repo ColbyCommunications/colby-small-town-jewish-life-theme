@@ -1,4 +1,4 @@
 {
-    "extends": "@colbycommunications/colby",
+    "extends": "@ColbyCommunications/colby",
     "root": true
 }
