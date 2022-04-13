@@ -61,7 +61,7 @@ let webpackConfig = {
                         options: {
                             cacheDirectory: true,
                             babelrc: false,
-                            presets: [require.resolve('@ColbyCommunications/babel-preset-colby')],
+                            presets: [require.resolve('@colbycommunications/babel-preset-colby')],
                         },
                     },
                 ],
