@@ -34,8 +34,8 @@
     },
     "devDependencies": {
         "@babel/polyfill": "^7.8.7",
-        "@colbycommunications/babel-preset-colby": "^1.0.6",
-        "@colbycommunications/colby-eslint": "^1.0.24",
+        "@ColbyCommunications/babel-preset-colby": "^1.0.6",
+        "@ColbyCommunications/colby-eslint": "^2.0.0",
         "autoprefixer": "^8.2.0",
         "babel-loader": "^8.0.5",
         "browser-sync": "~2.24.7",
