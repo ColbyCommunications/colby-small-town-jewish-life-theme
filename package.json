@@ -10,11 +10,6 @@
     "bugs": {
         "url": "https://github.com/ColbyCommunications/colby-base-theme/issues"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run test"
-        }
-    },
     "browserslist": [
         "last 2 versions",
         "android 4",
