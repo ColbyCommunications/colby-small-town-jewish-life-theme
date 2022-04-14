@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
@@ -61,7 +62,7 @@ let webpackConfig = {
                         options: {
                             cacheDirectory: true,
                             babelrc: false,
-                            presets: [require.resolve('@colbycommunications/babel-preset-colby')],
+                            presets: [require.resolve('@ColbyCommunications/babel-preset-colby')],
                         },
                     },
                 ],
@@ -110,7 +111,7 @@ let webpackConfig = {
                         {
                             loader: 'postcss',
                             options: {
-                                config: { path: __dirname, ctx: config },
+                                postcssOptions: { path: __dirname, ctx: config },
                                 sourceMap: config.enabled.sourceMaps,
                             },
                         },
@@ -210,9 +211,11 @@ let webpackConfig = {
         // }),
         new FriendlyErrorsWebpackPlugin(),
     ],
-}; /** Let's only load dependencies as needed */
+};
 
-/* eslint-disable global-require */ if (config.enabled.optimize) {
+/* eslint-disable global-require */ /** Let's only load dependencies as needed */
+
+if (config.enabled.optimize) {
     webpackConfig = merge(webpackConfig, require('./webpack.config.optimize'));
 }
 
