@@ -1,0 +1,95 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/variants';
+
+@import './variables.scss';
+@import './mixins.scss';
+@import './pages.scss';
+@import './search.scss';
+@import './comments.scss';
+@import './forms.scss';
+@import './wp-classes.scss';
+@import './tables.scss';
+@import './pagination.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './elementor.scss';
+@import './posts.scss';
+
+#main {
+    margin-top: 90px;
+}
+
+.navbar {
+    transition: all 330ms ease-out;
+}
+
+.navbar-open {
+    transform: translateX(0);
+}
+.navbar-close {
+    transform: translateX(100%);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Map Tailwind */
+h1 {
+    @apply text-3xl;
+    @apply mb-4;
+}
+
+h2 {
+    @apply text-2xl;
+    @apply mt-8;
+    @apply mb-4;
+}
+
+h3 {
+    @apply text-xl;
+    @apply mt-6;
+    @apply mb-4;
+}
+
+p {
+    @apply mb-4;
+}
+
+a {
+    @apply text-colby-blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#main a {
+    text-decoration: underline;
+}
+
+#main a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #353535;
+    margin-top: 3rem;
+    color: #fff;
+    ul {
+        display: flex;
+        flex-direction: row !important;
+        li {
+            padding: 0.8rem;
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

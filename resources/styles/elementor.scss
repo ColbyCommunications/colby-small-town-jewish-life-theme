@@ -1,0 +1,91 @@
+section.equal-height div.elementor-widget-wrap > div {
+    display: flex;
+    height: 100%;
+    a.elementor-cta {
+        @include flex;
+        @include flex-direction(column);
+        height: 100%;
+        .elementor-cta__content {
+            flex-grow: 1;
+            align-content: flex-start;
+        }
+    }
+}
+
+.elementor-widget-container {
+    .elementor-text-editor {
+        a {
+            @apply text-colby-blue;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.elementor-widget-call-to-action {
+    a.elementor-cta {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .elementor-cta__content {
+        border-top: solid 7px #ffffff;
+        // &:before {
+        //     content: '';
+        //     @include arrow(bottom, #ffffff, 12px);
+        //     position: absolute;
+        //     left: calc(50% - 6px);
+        //     top: 0;
+        // }
+    }
+}
+
+.elementor-widget-slides .swiper-slide {
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 240px;
+        background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, rgba(0, 40, 120, 1) 100%);
+    }
+    .swiper-slide-inner {
+        z-index: 2;
+    }
+}
+
+.header-line {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        overflow: hidden;
+        line-height: 1.1em;
+        &:before {
+            content: '';
+            position: relative;
+            right: 10px;
+            display: inline-block;
+            height: 0.5em;
+            vertical-align: bottom;
+            width: 100%;
+            margin-left: -100%;
+            border-top: 1px solid #cacaca;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            position: relative;
+            left: 10px;
+            height: 0.5em;
+            vertical-align: bottom;
+            width: 100%;
+            margin-right: -100%;
+            border-top: 1px solid #cacaca;
+        }
+    }
+}

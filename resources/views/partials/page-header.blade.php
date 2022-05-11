@@ -1,3 +1,3 @@
-<div class="colby-base-theme-page-header">
-  <h1>{!! App::title() !!}</h1>
+<div class="page-header">
+  <h1>{!! $title !!}</h1>
 </div>
