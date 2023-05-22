@@ -20,7 +20,9 @@ section.page-header {
         li.special {
             position: relative;
             &:before {
-                background: transparent url(../images/donate_tag.png) no-repeat scroll center bottom;
+                background: transparent
+                    url(https://jewishlife.colby.edu/wp-content/uploads/2023/05/donate_tag.png)
+                    no-repeat scroll center bottom;
                 content: '';
                 position: absolute;
                 top: -17px;
