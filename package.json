@@ -1,28 +1,78 @@
 {
-    "name": "sage",
-    "private": true,
-    "browserslist": [
-        "extends @wordpress/browserslist-config"
-    ],
-    "engines": {
-        "node": ">=16.0.0"
+    "name": "timber-boilerplate",
+    "version": "1.0.0",
+    "description": "Timber boilerplate",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "ssh://codeserver.dev.2752ff17-ef94-4645-a681-7b933b703c62@codeserver.dev.2752ff17-ef94-4645-a681-7b933b703c62.drush.in:2222/~/repository.git"
     },
+    "author": "Gregory Spraggins",
+    "license": "ISC",
     "scripts": {
-        "dev": "bud dev",
-        "build": "bud build",
-        "translate": "npm run translate:pot && npm run translate:js",
-        "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
-        "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
+        "tailwind:build": "tailwind build style.css -o dist/styles/tailwind.css",
+        "fractal": "fractal start --sync",
+        "fractal:build": "fractal build",
+        "scripts:build": "webpack --config ./config/webpack/webpack.prod.js",
+        "scripts:watch": "webpack --watch --config ./config/webpack/webpack.dev.js",
+        "components:watch": "concurrently \"npm:fractal\" \"npm:scripts:watch\" \"npm:tailwind:watch\"",
+        "components:build": "run-s scripts:build fractal:build",
+        "build": "npm-run-all scripts:build components:build tailwind:build",
+        "build:platform": "npm-run-all scripts:build tailwind:build",
+        "watch": "npm run components:watch"
     },
     "devDependencies": {
-        "@roots/bud": "5.7.6",
-        "@roots/bud-tailwindcss": "5.7.6",
-        "@roots/bud-sass": "5.7.7",
-        "@roots/sage": "5.7.6"
+        "@babel/core": "^7.26.0",
+        "@babel/plugin-transform-runtime": "^7.25.9",
+        "@babel/preset-env": "^7.26.0",
+        "autoprefixer": "^10.4.20",
+        "babel-loader": "^9.2.1",
+        "babel-plugin-module-resolver": "^5.0.2",
+        "concurrently": "^9.1.2",
+        "css-loader": "^7.1.2",
+        "css-minimizer-webpack-plugin": "^7.0.0",
+        "expose-loader": "^5.0.0",
+        "file-loader": "^6.2.0",
+        "img-loader": "^4.0.0",
+        "mini-css-extract-plugin": "^2.9.2",
+        "node-sass": "^9.0.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-import": "^16.1.0",
+        "postcss-loader": "^8.1.1",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.83.4",
+        "sass-lint": "^1.13.1",
+        "sass-lint-webpack": "^1.0.4",
+        "sass-loader": "^16.0.4",
+        "style-loader": "^4.0.0",
+        "svg-spritemap-webpack-plugin": "^4.7.0",
+        "terser-webpack-plugin": "^5.3.11",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-merge": "^6.0.1",
+        "webpack-notifier": "^1.15.0"
     },
     "dependencies": {
-        "@roots/bud-vue": "5.7.7",
-        "pinia": "^2.0.13",
-        "vue": "^3.2.33"
+        "@algolia/autocomplete-js": "^1.17.9",
+        "@frctl/fractal": "^1.5.15",
+        "@frctl/twig": "^1.2.12",
+        "@glidejs/glide": "3.6.0",
+        "algoliasearch": "^5.19.0",
+        "axios": "^1.7.9",
+        "foundation-sites": "6.7.4",
+        "fuse.js": "^7.0.0",
+        "gsap": "^3.12.7",
+        "letterizejs": "^2.0.1",
+        "lodash": "^4.17.21",
+        "mitt": "^3.0.1",
+        "moment": "^2.30.1",
+        "tailwindcss": "^3.4.17",
+        "vue": "^3.5.13",
+        "vue-final-modal": "^3.4.10",
+        "vue-instantsearch": "^4.20.1",
+        "vue-loader": "^17.4.2",
+        "vue-template-compiler": "^2.7.16",
+        "waypoints": "^4.0.1",
+        "yt-player": "^3.6.1"
     }
 }

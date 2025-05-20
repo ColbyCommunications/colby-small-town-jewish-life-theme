@@ -1,0 +1,107 @@
+@use '~foundation-sites/scss/foundation' as f;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.colby-page {
+    overflow: hidden;
+}
+
+p {
+    a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// This random css has been placed here instead of appropriate talewind styles
+// because of a rendering issue using twig, vue, tailwind, and wordpress at once.
+// the ampersand when pointing to direct children in tailwind classes kills
+// our template when viewed in wordpress. Will revisit later.
+.overlay-hero {
+    .video {
+        height: 100%;
+
+        @include f.breakpoint(medium) {
+            height: auto;
+        }
+    }
+}
+
+// This non tailwind css is required to style event embeds from livewhale
+.lwcw {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2.5rem;
+    max-width: 1536px;
+}
+
+.lw-colby-event {
+    grid-column: span 6 / span 6;
+
+    @include f.breakpoint(medium) {
+        grid-column: span 4 / span 4;
+    }
+}
+
+.lw-event-date {
+    font-family: nimbus-sans-extended, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #366bcf;
+}
+
+.lw-event-time {
+    font-family: Libre Franklin, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: (18 / 14);
+    color: #365185;
+    margin-top: 0.5rem;
+}
+
+.lw-event-name a {
+    font-family: nimbus-sans-extended, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #012169;
+    margin-top: 0.5rem;
+}
+
+// These are animation specific styles for easy access
+
+.text-group--animated {
+    .text-group__subheading span {
+        display: inline-block;
+        opacity: 0;
+        transform: translate(0, 5px);
+    }
+
+    .text-group__heading span {
+        display: inline-block;
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+
+    .text-group__p {
+        opacity: 0;
+    }
+}
+
+.full-bleed:last-child {
+    margin-bottom: -80px;
+
+    @include f.breakpoint(medium) {
+        margin-bottom: -100px;
+    }
+}
